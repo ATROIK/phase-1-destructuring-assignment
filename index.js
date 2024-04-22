@@ -1,6 +1,21 @@
 const farmAnimals = 'cow horse sheep pig chicken';
 
+const [moo, neigh, baa, oink, cluck] = farmAnimals.split(' ');
+
+// ignore unwanted elements with comma. , , ignored horse
+const [bessie, , dolly, babe, little] = farmAnimals.split(' ')
+
+const [blackAndWhite, ,black, pink, ,] = farmAnimals.split(' ')
+
+
+//each colour has been assigned to a seperate variable, containing a string (color name) which can be used individually as variables
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+const [red, orange, yellow, green, blue, indigo, violet] = colors
+//ignored violet with , ,. color names now variables whose name is the first letter.
+const [r, o, y, g, b, ,v] = colors
+const [ , , , , , indg, ] = colors
+
+
 
 const muppet = {
   muppetName: 'Miss Piggy',
@@ -9,6 +24,8 @@ const muppet = {
   job: 'Cast member of The Muppet Show',
   partner: 'Kermit'
 };
+
+const {muppetName, color, song, job, partner} = muppet
 
 const nestedMuppet = {
   nestedName: 'Kermit',
@@ -24,6 +41,10 @@ const nestedMuppet = {
   nestedJob: 'Host of The Muppet Show',
   nestedPartner: 'Miss Piggy'
 };
+// need 2 x variables, found this by clg nestedPartner and came back undefined. nestedParter and nestedJob are part of nestedMuppet
+const { song2, song4} = nestedMuppet.album.theMuppetMovie;
+const {nestedJob, nestedPartner} = nestedMuppet
+console.log(song4);
 
 // Strings
 
